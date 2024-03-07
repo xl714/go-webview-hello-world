@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <input type="text" id="nameInput" placeholder="Entrez votre nom" />
+    <button onclick="greet()">Envoyer</button>
+    <script>
+      function greet() {
+        const name = document.getElementById("nameInput").value;
+        const data = { name };
+        const jsonData = JSON.stringify(data);
+        window.sayHello(jsonData).then((result) => {
+          alert(result);
+        });
+      }
+    </script>
+  </body>
+</html>
